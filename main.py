@@ -5,7 +5,7 @@ def main ():
     count = count_text(file_contents)
     dict = book_text(file_contents)
     dict_list = [{"char": char, "num": count} for char, count in dict.items()]
-    dict_list.sort(key=lambda x: x["char"])
+    dict_list.sort(key=lambda x: x["num"], reverse=True)
     print(f"Begin word count report on book")
     print(f"{count} words found in document!")
     for item in dict_list:
